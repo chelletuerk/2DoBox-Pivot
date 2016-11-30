@@ -51,6 +51,10 @@ textarea {
   text-align: center;
 }
 
+.completed {
+  background-color: grey;
+}
+
 #complete-btn {
   background-color: #00A79D;
   border: none;
