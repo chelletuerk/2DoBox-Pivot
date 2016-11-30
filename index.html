@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/reset.css"/>
@@ -17,16 +17,16 @@
         <h1 id="idea-logo">To</h1><h1 id="box-logo">Do</h1>
       </summary>
       <form>
-        <textarea type="text" id="title" placeHolder="Title"></textarea>
-        <textarea type="text" id="body" placeHolder="Task"></textarea>
-        <input type="submit" value="save" class="button" id="save" disabled>
+        <textarea type="text" aria-label="Text-title" id="title" placeHolder="Title"></textarea>
+        <textarea type="text" aria-label="Text-body" id="body" placeHolder="Task"></textarea>
+        <input type="submit"  value="save" class="button" id="save" disabled>
       </form>
       <button class="button" id="sort">sort</button>
 
     </header>
 
    <section class="search">
-      <textarea type="text" id="search" placeHolder="Search"></textarea>
+      <textarea type="text" id="search" aria-label="search-field" placeHolder="Search"></textarea>
       <button id="show-completed-btn">Show Completed Tasks</button>
    </section>
 
