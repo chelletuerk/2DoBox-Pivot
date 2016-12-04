@@ -7,7 +7,7 @@ const {checkField, emptyIdeas} = require('../lib/helpers.js')
 
 describe("checkField", function(){
 
-  it.skip('checkField should be a function', function () {
+  it('checkField should be a function', function () {
     assert.isFunction(checkField);
   });
 
@@ -15,7 +15,7 @@ describe("checkField", function(){
 
 describe("emptyIdeas", function(){
 
-  it.skip('emptyIdeas should be a function', function () {
+  it('emptyIdeas should be a function', function () {
     assert.isFunction(emptyIdeas);
   });
 

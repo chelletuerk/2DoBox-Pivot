@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --hot --inline",
     "build": "webpack",
-    "test": "mocha"
+    "sel": "mocha test/index-test.js"
   },
   "repository": {
     "type": "git",
@@ -35,6 +35,10 @@
     "selenium-webdriver": "^3.0.1",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.3",
-    "webpack-dev-server": "^1.16.2"
+    "webpack-dev-server": "^1.16.2",
+    "wdio-dot-reporter": "0.0.6",
+    "wdio-mocha-framework": "^0.4.0",
+    "wdio-selenium-standalone-service": "0.0.6",
+    "webdriverio": "^4.2.11"
   }
 }
