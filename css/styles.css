@@ -3,7 +3,7 @@ body {
 }
 
 header {
-  background-color: #E5F3F2;
+  background-color: #A0CECE;
   height: 420px;
   padding-top: 10px;
   text-align: center;
@@ -16,7 +16,7 @@ summary {
 }
 
 textarea {
-  border: 1px solid #D1D3D4;
+  border: 1px solid #004A46;
   display: inline-block;
   font-size: 20px;
   height: 30px;
@@ -25,8 +25,13 @@ textarea {
   width: 90vw;
 }
 
+p {
+  color: #004A46;
+  font-size: 20px;
+}
+
 .button {
-  background-color: #00A79D;
+  background-color: #004A46;
   border: none;
   color: #FFF;
   display: inline-block;
@@ -38,7 +43,7 @@ textarea {
 }
 
 .buttons {
-  background-color: #00A79D;
+  background-color: #004A46;
   border: none;
   color: #FFF;
   display: inline-block;
@@ -46,7 +51,7 @@ textarea {
   font-family: 'Open Sans', sans-serif;
   height: 30px;
   margin:  5px auto;
-  width: 10vw;
+  width: 11vw;
 }
 
 .button:hover {
@@ -64,33 +69,20 @@ textarea {
 }
 
 .completed {
-  background-color: grey;
+  background-color: lightgrey;
 }
 
+
 #complete-btn {
-  background-color: #00A79D;
+  background-color: #004A46;
   border: none;
   color: #FFF;
   height: 30px;
   width: 130px;
   position: absolute;
   right: 0;
-  /*border-radius: 30vh;*/
   font-size: 15px;
   font-family: 'Open Sans', sans-serif;
-}
-
-#show-completed-btn {
-    background-color: #00A79D;
-    border: none;
-    color: #FFF;
-    display: inline-block;
-    font-size: 18px;
-    font-family: 'Open Sans', sans-serif;
-    margin-top: 5px;
-    position: relative;
-    text-align: center;
-    width: 92vw;
 }
 
 #body{
@@ -98,14 +90,14 @@ textarea {
 }
 
 #idea-logo {
-  color: #00A79D;
+  color: #004A46;
   display: inline;
   font-family: 'Roboto Slab', serif;
   font-size: 40px;
 }
 
 #box-logo{
-  color: #6D6E71;
+  color: #4F5555;
   display: inline;
   font-family: 'Roboto Slab', serif;
   font-size: 40px;
