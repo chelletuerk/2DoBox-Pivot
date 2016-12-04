@@ -28,6 +28,7 @@ textarea {
 p {
   color: #004A46;
   font-size: 20px;
+  margin-top: 5px;
 }
 
 .button {
@@ -60,6 +61,10 @@ p {
 .button:disabled {
   background-color: lightgray;
   cursor: default;
+}
+
+.buttons:hover {
+    background-color: #045E55;
 }
 
 .search {
