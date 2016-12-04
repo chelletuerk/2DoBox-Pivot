@@ -3,8 +3,6 @@ const chai = require('chai');
 
 const Idea = require('../lib/idea.js')
 
-
-
 describe("Idea", function(){
 
   it('should take the first argument and set it as the "title" property', function () {
