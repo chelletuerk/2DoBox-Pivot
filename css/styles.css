@@ -37,6 +37,18 @@ textarea {
   width: 92vw;
 }
 
+.buttons {
+  background-color: #00A79D;
+  border: none;
+  color: #FFF;
+  display: inline-block;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  height: 30px;
+  margin:  5px auto;
+  width: 10vw;
+}
+
 .button:hover {
   background-color: #045E55;
 }
