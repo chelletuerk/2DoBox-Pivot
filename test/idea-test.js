@@ -5,6 +5,7 @@ const Idea = require('../lib/idea.js')
 
 
 
+
 describe("Idea", function(){
 
   it('is an Object', function(){
@@ -26,5 +27,7 @@ describe("Idea", function(){
     var idea = new Idea('Best', 'Ever');
     assert.equal(idea.body, 'Ever');
   });
+
+
 
 });

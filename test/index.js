@@ -1,8 +1,3 @@
 const assert = require('chai').assert
-const ideaTest = require('./idea');
-
-describe('our test bundle', function () {
-  it('should work', function () {
-    assert(true)
-    })
-  })
+const ideaTest = require('./idea-test');
+const sortTest = require('./sort-test');
