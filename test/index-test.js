@@ -32,14 +32,52 @@ test.describe('our test bundle', function () {
     })
   })
 
-  test.it('should delete an element off the dom', function () {
-    driver.findElement({id: 'title'}).sendKeys('This is a title')
-    driver.findElement({id: 'body'}).sendKeys('This is a task')
-    driver.findElement({id: 'save'}).click()
-    driver.findElement({id: 'delete-btn'}).click()
-    const ideas = driver.findElement({id: 'ideas'})
+  test.it('should delete an element off the dom', function() {
+    driver.findElement({id: 'title'}).sendKeys('This is a title');
+    driver.findElement({id: 'body'}).sendKeys('This is a task');
+    driver.findElement({id: 'save'}).click();
+    driver.findElement({id: 'delete-btn'}).click();
+    const ideas = driver.findElement({id: 'ideas'});
     ideas.getText().then(function(html) {
-      assert.equal("", html)
+      assert.equal("", html);
     })
   })
+
+  test.it('should count characters in text fields', function() {
+    driver.findElement({id: 'title'}).sendKeys('xxx');
+    const titleCount = driver.findElement({id: 'titleCount'})
+    titleCount.getText().then(function(count) {
+      assert.equal("Total Characters: 3", count)
+    })
+  })
+
+    test.it('should count characters in text fields', function() {
+      driver.findElement({id: 'body'}).sendKeys('xxxx');
+      const bodyCount = driver.findElement({id: 'bodyCount'})
+      bodyCount.getText().then(function(count) {
+        assert.equal("Total Characters: 4", count)
+      })
+    })
+
+    test.it('should be able to change up quality', function() {
+      driver.findElement({id: 'title'}).sendKeys('This is a title');
+      driver.findElement({id: 'body'}).sendKeys('This is a task');
+      driver.findElement({id: 'save'}).click();
+      driver.findElement({id: 'up-btn'}).click();
+      const quality = driver.findElement({id: 'quality'});
+      quality.getText().then(function(html) {
+        assert.equal("quality: high", html);
+      })
+    })
+
+        test.it('should be able to change down quality', function() {
+          driver.findElement({id: 'title'}).sendKeys('This is a title');
+          driver.findElement({id: 'body'}).sendKeys('This is a task');
+          driver.findElement({id: 'save'}).click();
+          driver.findElement({id: 'down-btn'}).click();
+          const quality = driver.findElement({id: 'quality'});
+          quality.getText().then(function(html) {
+            assert.equal("quality: low", html);
+          })
+        })
 })//bottom test bracket
