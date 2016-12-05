@@ -70,14 +70,72 @@ test.describe('our test bundle', function () {
       })
     })
 
-        test.it('should be able to change down quality', function() {
-          driver.findElement({id: 'title'}).sendKeys('This is a title');
-          driver.findElement({id: 'body'}).sendKeys('This is a task');
-          driver.findElement({id: 'save'}).click();
-          driver.findElement({id: 'down-btn'}).click();
-          const quality = driver.findElement({id: 'quality'});
-          quality.getText().then(function(html) {
-            assert.equal("quality: low", html);
-          })
-        })
+    test.it('should be able to change down quality', function() {
+      driver.findElement({id: 'title'}).sendKeys('This is a title');
+      driver.findElement({id: 'body'}).sendKeys('This is a task');
+      driver.findElement({id: 'save'}).click();
+      driver.findElement({id: 'down-btn'}).click();
+      const quality = driver.findElement({id: 'quality'});
+      quality.getText().then(function(html) {
+        assert.equal("quality: low", html);
+      })
+    })
+
+    test.it('should show ideas with low quality', function() {
+      driver.findElement({id: 'title'}).sendKeys('This is a title');
+      driver.findElement({id: 'body'}).sendKeys('This is a task');
+      driver.findElement({id: 'save'}).click();
+      driver.findElement({id: 'down-btn'}).click();
+      driver.findElement({id: 'low'}).click();
+      const quality = driver.findElement({id: 'quality'});
+      quality.getText().then(function(html) {
+        assert.equal("quality: low", html);
+      })
+    })
+
+    test.it('should show ideas with none quality', function() {
+      driver.findElement({id: 'title'}).sendKeys('This is a title');
+      driver.findElement({id: 'body'}).sendKeys('This is a task');
+      driver.findElement({id: 'save'}).click();
+      driver.findElement({id: 'down-btn'}).click();
+      driver.findElement({id: 'down-btn'}).click();
+      driver.findElement({id: 'none'}).click();
+      const quality = driver.findElement({id: 'quality'});
+      quality.getText().then(function(html) {
+        assert.equal("quality: none", html);
+      })
+    })
+
+    test.it('should show ideas with normal quality', function() {
+      driver.findElement({id: 'title'}).sendKeys('This is a title');
+      driver.findElement({id: 'body'}).sendKeys('This is a task');
+      driver.findElement({id: 'save'}).click();
+      const quality = driver.findElement({id: 'quality'});
+      quality.getText().then(function(html) {
+        assert.equal("quality: normal", html);
+      })
+    })
+
+    test.it('should show ideas with high quality', function() {
+      driver.findElement({id: 'title'}).sendKeys('This is a title');
+      driver.findElement({id: 'body'}).sendKeys('This is a task');
+      driver.findElement({id: 'save'}).click();
+      driver.findElement({id: 'up-btn'}).click();
+      const quality = driver.findElement({id: 'quality'});
+      quality.getText().then(function(html) {
+        assert.equal("quality: high", html);
+      })
+    })
+
+    test.it('should show ideas with critical quality', function() {
+      driver.findElement({id: 'title'}).sendKeys('This is a title');
+      driver.findElement({id: 'body'}).sendKeys('This is a task');
+      driver.findElement({id: 'save'}).click();
+      driver.findElement({id: 'up-btn'}).click();
+      driver.findElement({id: 'up-btn'}).click();
+      const quality = driver.findElement({id: 'quality'});
+      quality.getText().then(function(html) {
+        assert.equal("quality: critical", html);
+      })
+    })
 })//bottom test bracket
