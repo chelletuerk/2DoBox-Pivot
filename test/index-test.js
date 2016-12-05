@@ -267,5 +267,4 @@ test.describe('our test bundle', function () {
         assert.equal("Completed", html);
       })
     })
-
-})//bottom test bracket
+})
