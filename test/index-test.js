@@ -19,12 +19,9 @@ test.describe('our test bundle', function () {
     driver.findElement({id: 'title'}).sendKeys('Work')
     driver.findElement({id: 'body'}).sendKeys('Please')
     driver.findElement({id: 'save'}).click()
-
-
     driver.findElement({id: 'idea-body'}).then(function(body){
       return body.getText();
     }).then(function(bodytext){
-      console.log(bodytext)
       assert.equal(bodytext, "Please")
     })
 
@@ -33,6 +30,16 @@ test.describe('our test bundle', function () {
     }).then(function(text){
       assert.equal(text, "Work")
     })
+  })
 
+  test.it('should delete an element off the dom', function () {
+    driver.findElement({id: 'title'}).sendKeys('This is a title')
+    driver.findElement({id: 'body'}).sendKeys('This is a task')
+    driver.findElement({id: 'save'}).click()
+    driver.findElement({id: 'delete-btn'}).click()
+    const ideas = driver.findElement({id: 'ideas'})
+    ideas.getText().then(function(html) {
+      assert.equal("", html)
     })
   })
+})//bottom test bracket
